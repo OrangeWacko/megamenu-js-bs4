@@ -19,13 +19,13 @@ $(document).ready(function () {
 
     $(".menu > ul > li").hover(
         function (e) {
-            if ($(window).width() > 992) {
+            if ($(window).outerWidth() > 992) {
                 $(this).children(".mega-menu").fadeIn(150);
                 $(this).children("ul").fadeIn(150);
                 e.preventDefault();
             }
         }, function (e) {
-            if ($(window).width() > 992) {
+            if ($(window).outerWidth() > 992) {
                 $(this).children(".mega-menu").fadeOut(150);
                 $(this).children("ul").fadeOut(150);
                 e.preventDefault();
@@ -50,7 +50,7 @@ $(document).ready(function () {
         if(thisMenu) {
             var prevState = thisMenu.css('display');
             thisMenu.fadeOut();
-            if ($(window).width() < 992) {
+            if ($(window).outerWidth() < 992) {
                 if(prevState !== 'block')
                     thisMenu.fadeIn(150);
             }
@@ -59,7 +59,7 @@ $(document).ready(function () {
         if (thisMegaMenu) {
             var prevState = thisMegaMenu.css('display');
             thisMegaMenu.fadeOut();
-            if ($(window).width() < 992) {
+            if ($(window).outerWidth() < 992) {
                 if(prevState !== 'block')
                     thisMegaMenu.fadeIn(150);
             }
