@@ -74,11 +74,11 @@ This version uses Bootstrap4 to build HTML content inside the Mega-menu HTML con
 
 
 ## Wordpress integration
-Use the custom HTML5 Walker to build the structure of your Wordpress menu that mactches the Megamenu-JS example above:
+Use the custom HTML5 Walker to build the structure of your Wordpress menu that matches the Megamenu-JS example above:
 
 **1)** In your functions.php add these lines ([taken from HTML5blank by @toddmotto](https://github.com/toddmotto/html5blank))
 
-That customizes the menu from everything wordpress has added and from this point the menu is like you are doing a static version.
+That customizes the menu from everything Wordpress has added and from this point the menu is like you are doing a static version.
 
 **2)** Then simply wrap the wordpress menu with megamenu.js wrappers!
 

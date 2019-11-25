@@ -13,26 +13,26 @@ $(document).ready(function () {
     $(".menu > ul").before("<a href=\"#\" class=\"menu-mobile\">Navigation</a>");
 
     //Adds menu-mobile class (for mobile toggle menu) before the normal menu
-    //Mobile menu is hidden if width is more then 959px, but normal menu is displayed
-    //Normal menu is hidden if width is below 959px, and jquery adds mobile menu
+    //Mobile menu is hidden if width is more then 992px, but normal menu is displayed
+    //Normal menu is hidden if width is below 992px, and jquery adds mobile menu
     //Done this way so it can be used with wordpress without any trouble
 
     $(".menu > ul > li").hover(
         function (e) {
-            if ($(window).width() > 943) {
+            if ($(window).width() > 992) {
                 $(this).children(".mega-menu").fadeIn(150);
                 $(this).children("ul").fadeIn(150);
                 e.preventDefault();
             }
         }, function (e) {
-            if ($(window).width() > 943) {
+            if ($(window).width() > 992) {
                 $(this).children(".mega-menu").fadeOut(150);
                 $(this).children("ul").fadeOut(150);
                 e.preventDefault();
             }
         }
     );
-    //If width is more than 943px dropdowns are displayed on hover
+    //If width is more than 992px dropdowns are displayed on hover
 
 
     //the following hides the menu when a click is registered outside
@@ -50,7 +50,7 @@ $(document).ready(function () {
         if(thisMenu) {
             var prevState = thisMenu.css('display');
             thisMenu.fadeOut();
-            if ($(window).width() < 943) {
+            if ($(window).width() < 992) {
                 if(prevState !== 'block')
                     thisMenu.fadeIn(150);
             }
@@ -59,7 +59,7 @@ $(document).ready(function () {
         if (thisMegaMenu) {
             var prevState = thisMegaMenu.css('display');
             thisMegaMenu.fadeOut();
-            if ($(window).width() < 943) {
+            if ($(window).width() < 992) {
                 if(prevState !== 'block')
                     thisMegaMenu.fadeIn(150);
             }
@@ -67,7 +67,7 @@ $(document).ready(function () {
         
         
     });
-    //If width is less or equal to 943px dropdowns are displayed on click (thanks Aman Jain from stackoverflow)
+    //If width is less or equal to 992px dropdowns (BS4 Medium size)
 
     $(".menu-mobile").click(function (e) {
         $(".menu > ul").toggleClass('show-on-mobile');

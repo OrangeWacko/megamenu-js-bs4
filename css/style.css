@@ -137,7 +137,7 @@ Screen style's
 .menu > ul > li > .mega-menu {
     display: none;
     width: 100%;
-    background: #f0f0f0;
+    background: #354445;
     padding: 20px;
     position: absolute;
     z-index: 99;
@@ -147,10 +147,14 @@ Screen style's
     box-sizing: border-box;
 }
 
+.menu > ul li ul li a {
+    color: white;
+}
+
 .menu > ul > li > ul {
     display: none;
     width: 300px;
-    background: #f0f0f0;
+    background: #354445;
     padding: 10px 20px;
     position: absolute;
     z-index: 99;
@@ -183,12 +187,14 @@ Screen style's
 }
 
 .menu > ul > li > .mega-menu li a {
-    color: #777;
     padding: .2em 0;
     width: 95%;
     display: block;
     border-bottom: 1px solid #ccc;
+    font-size: 0.8rem;
+    text-transform: uppercase;
 }
+
 
 .menu > ul > li > .mega-menu li > ul {
     display: block;
@@ -218,6 +224,8 @@ Screen style's
 
 .menu > ul > li > .mega-menu li > ul > li a {
     border: 0;
+    text-transform: none;
+    font-size: 1rem;
 }
 
 .menu > ul > li > .mega-menu.normal-sub {
@@ -240,7 +248,7 @@ Screen style's
 Mobile style's
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 991.98px) {
     .menu-container {
         width: 100%;
     }
