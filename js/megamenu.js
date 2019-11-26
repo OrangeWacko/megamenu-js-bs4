@@ -45,7 +45,7 @@ $(document).ready(function () {
         //no more overlapping menus
         //hides other children menus when a list item with children menus is clicked
         var thisMenu = $(this).children("ul");
-        var thisMegaMenu = $(this).children(".mega-menu");
+        var thisMenu = $(this).children(".mega-menu");
         
         if(thisMenu) {
             var prevState = thisMenu.css('display');
@@ -73,7 +73,6 @@ $(document).ready(function () {
                     $('.mega-menu').not(thisMegaMenu).hide();
                     thisMegaMenu.parent('.menu-dropdown-icon').addClass('clicked'); 
                 } else {
-                    
                     thisMegaMenu.parent('.menu-dropdown-icon.clicked').removeClass('clicked');
                 }
             }
