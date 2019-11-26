@@ -50,18 +50,32 @@ $(document).ready(function () {
         if(thisMenu) {
             var prevState = thisMenu.css('display');
             thisMenu.fadeOut();
+            $('.menu-dropdown-icon.clicked').removeClass('clicked');
             if ($(window).outerWidth() < 992) {
-                if(prevState !== 'block')
-                    thisMenu.fadeIn(150);
+                if(prevState !== 'block') { 
+                    thisMenu.fadeIn(150); 
+                    $('.mega-menu').not(thisMenu).hide();
+                    thisMenu.parent('.menu-dropdown-icon').addClass('clicked'); 
+                } else {
+                    thisMenu.parent('.menu-dropdown-icon.clicked').removeClass('clicked');
+                }
+                   
             }
         }
 
         if (thisMegaMenu) {
             var prevState = thisMegaMenu.css('display');
             thisMegaMenu.fadeOut();
+            $('.menu-dropdown-icon.clicked').removeClass('clicked');
             if ($(window).outerWidth() < 992) {
-                if(prevState !== 'block')
-                    thisMegaMenu.fadeIn(150);
+                if(prevState !== 'block') { 
+                    thisMegaMenu.fadeIn(150); 
+                    $('.mega-menu').not(thisMegaMenu).hide();
+                    thisMegaMenu.parent('.menu-dropdown-icon').addClass('clicked'); 
+                } else {
+                    
+                    thisMegaMenu.parent('.menu-dropdown-icon.clicked').removeClass('clicked');
+                }
             }
         }
         
