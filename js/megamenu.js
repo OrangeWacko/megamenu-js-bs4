@@ -45,7 +45,7 @@ $(document).ready(function () {
         //no more overlapping menus
         //hides other children menus when a list item with children menus is clicked
         var thisMenu = $(this).children("ul");
-        var thisMenu = $(this).children(".mega-menu");
+        var thisMegaMenu = $(this).children(".mega-menu");
         
         if(thisMenu) {
             var prevState = thisMenu.css('display');
