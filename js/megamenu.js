@@ -47,21 +47,23 @@ $(document).ready(function () {
         var thisMenu = $(this).children("ul");
         var thisMegaMenu = $(this).children(".mega-menu");
         
-        if(thisMenu) {
-            var prevState = thisMenu.css('display');
-            thisMenu.fadeOut();
-            $('.menu-dropdown-icon.clicked').removeClass('clicked');
-            if ($(window).outerWidth() < 992) {
-                if(prevState !== 'block') { 
-                    thisMenu.fadeIn(150); 
-                    $('.mega-menu').not(thisMenu).hide();
-                    thisMenu.parent('.menu-dropdown-icon').addClass('clicked'); 
-                } else {
-                    thisMenu.parent('.menu-dropdown-icon.clicked').removeClass('clicked');
-                }
+// Don't need this function right now
+        
+//         if(thisMenu) {
+//             var prevState = thisMenu.css('display');
+//             thisMenu.fadeOut();
+//             $('.menu-dropdown-icon.clicked').removeClass('clicked');
+//             if ($(window).outerWidth() < 992) {
+//                 if(prevState !== 'block') { 
+//                     thisMenu.fadeIn(150); 
+//                     $('.mega-menu').not(thisMenu).hide();
+//                     thisMenu.parent('.menu-dropdown-icon').addClass('clicked'); 
+//                 } else {
+//                     thisMenu.parent('.menu-dropdown-icon.clicked').removeClass('clicked');
+//                 }
                    
-            }
-        }
+//             }
+//         }
 
         if (thisMegaMenu) {
             var prevState = thisMegaMenu.css('display');
