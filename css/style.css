@@ -291,7 +291,7 @@ Mobile style's
     .menu > ul > li > .mega-menu li > ul > li {
         float: none;
     }
-    .menu .show-on-mobile {
+    .menu .show-on-mobile, .menu .collapse.show {
         display: block;
     }
 }
